@@ -54,9 +54,73 @@
         },
     ]
 
+
+    var cancelloHS = [
+        {
+            "pitch": -0.6,
+            "yaw": 100,
+            "type": "scene",
+            "text": "Verso il logo ",
+            "sceneId": "logo",
+            "targetYaw": 100,
+            "targetPitch": 2
+        }
+    ]
+    var logoHS = [
+        {
+            "pitch": -0.6,
+            "yaw": 100,
+            "type": "scene",
+            "text": "Verso la porta",
+            "sceneId": "porta",
+            "targetYaw": 200,
+            "targetPitch": 2
+        },
+        {
+            "pitch": -0.6,
+            "yaw": -120,
+            "type": "scene",
+            "text": "Verso cancello",
+            "sceneId": "cancello",
+            "targetYaw": 280,
+            "targetPitch": 2
+        }
+    ]
+    var portaHS = [
+        {
+            "pitch": -0.6,
+            "yaw": 200,
+            "type": "scene",
+            "text": "Verso ingresso",
+            "sceneId": "ingresso",
+            "targetYaw": 120,
+            "targetPitch": 2
+        },
+        {
+            "pitch": -0.6,
+            "yaw": 80,
+            "type": "scene",
+            "text": "Verso logo",
+            "sceneId": "logo",
+            "targetYaw": 280,
+            "targetPitch": 2
+        }
+    ]
+    var ingressoHS = [
+        {
+            "pitch": -0.6,
+            "yaw": 320,
+            "type": "scene",
+            "text": "Verso porta",
+            "sceneId": "porta",
+            "targetYaw": 200,
+            "targetPitch": 2
+        }
+    ]
+
     pannellum.viewer('panorama', {   
         "default": {
-            "firstScene": "countryroad",
+            "firstScene": "cancello",
             "autoLoad": true,   
             "author": "Fabbrica Digitale",
             "compass": true,
@@ -65,24 +129,42 @@
         },
 
         "scenes": {
-            "countryroad": {
-                "title": "Country Road",
+           "cancello" : { 
+                "title": "cancello",
                 "hfov": 110,
                 "pitch": -3,
                 "yaw": 117,
                 "type": "equirectangular",
-                "panorama": "https://pannellum.org/images/tocopilla.jpg",
-                //"panorama": "https://i.imgur.com/6sJk16R.jpg",
-                "hotSpots": countryroadHS
-            },
-            "desert": {
-                "title": "Desert",
+                "panorama": "./img/1.jpg",
+                "hotSpots": cancelloHS
+           },
+           "logo" : { 
+                "title": "logo",
                 "hfov": 110,
-                "yaw": 5,
+                "pitch": -3,
+                "yaw": 117,
                 "type": "equirectangular",
-                "panorama": "https://i.imgur.com/G7t9QD9.jpg",
-                "hotSpots": desertHS
-            }
+                "panorama": "./img/2.jpg",
+                "hotSpots": logoHS
+           },
+           "porta" : { 
+                "title": "porta",
+                "hfov": 110,
+                "pitch": -3,
+                "yaw": 117,
+                "type": "equirectangular",
+                "panorama": "./img/3.jpg",
+                "hotSpots": portaHS
+           },
+           "ingresso" : { 
+                "title": "ingresso",
+                "hfov": 110,
+                "pitch": -3,
+                "yaw": 117,
+                "type": "equirectangular",
+                "panorama": "./img/4.jpg",
+                "hotSpots": ingressoHS
+           }
         }
     });
 
