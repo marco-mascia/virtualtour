@@ -118,7 +118,10 @@
         }
     ]
 
-    pannellum.viewer('panorama', {   
+
+
+
+    viewer = pannellum.viewer('panorama', {   
         "default": {
             "firstScene": "cancello",
             "autoLoad": true,   
@@ -168,6 +171,16 @@
         }
     });
 
+       
+    viewer.on('mousedown', function(event) {
+        // For pitch and yaw of center of viewer
+        console.log("Pitch: ", viewer.getPitch());
+        console.log("Yaw: ", viewer.getYaw());
+        // For pitch and yaw of mouse location
+        //console.log(viewer.mouseEventToCoords(event));
+        console.log('-----');
+    });
+
 
     // Hot spot creation function
     function hotspot(hotSpotDiv, args) {
@@ -179,4 +192,8 @@
         span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
+
+
+
+
 }())
