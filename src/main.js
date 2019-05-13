@@ -118,14 +118,7 @@
         }
     ]
 
-<<<<<<< HEAD
-
-
-
     viewer = pannellum.viewer('panorama', {   
-=======
-    pannellum.viewer('panorama', {   
->>>>>>> b78f61069c4c648e6435d4e5d5c2cc4c23780952
         "default": {
             "firstScene": "cancello",
             "autoLoad": true,   
@@ -174,9 +167,7 @@
            }
         }
     });
-
-<<<<<<< HEAD
-       
+  
     viewer.on('mousedown', function(event) {
         // For pitch and yaw of center of viewer
         console.log("Pitch: ", viewer.getPitch());
@@ -185,9 +176,6 @@
         //console.log(viewer.mouseEventToCoords(event));
         console.log('-----');
     });
-
-=======
->>>>>>> b78f61069c4c648e6435d4e5d5c2cc4c23780952
 
     // Hot spot creation function
     function hotspot(hotSpotDiv, args) {
@@ -199,11 +187,5 @@
         span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> b78f61069c4c648e6435d4e5d5c2cc4c23780952
 }())
