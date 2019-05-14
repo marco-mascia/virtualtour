@@ -64,7 +64,32 @@
             "sceneId": "logo",
             "targetYaw": 100,
             "targetPitch": 2
-        }
+        },
+        {
+            "pitch": 1,
+            "yaw": -83,
+            "type": "info",
+            "cssClass": "hotspot",         //classe css personalizzata
+            "createTooltipFunc": hotspot,  //funzione di rendering
+            "createTooltipArgs": "bacheca" //parametri 
+         },
+         {
+            "pitch": 1,
+            "yaw": -83,
+            "type": "info",
+            "cssClass": "hotspot",         //classe css personalizzata
+            "createTooltipFunc": hotspot,  //funzione di rendering
+            "createTooltipArgs": "bla bla bla" //parametri 
+         },
+         {
+            "pitch": 1,
+            "yaw": -100,
+            "type": "info",
+            "cssClass": "hotspot",         //classe css personalizzata
+            "createTooltipFunc": hotspotImageRenderer,  //funzione di rendering
+            "createTooltipArgs": "img/Tiger.jpg" //parametri 
+         }
+         
     ]
     var logoHS = [
         {
@@ -118,14 +143,10 @@
         }
     ]
 
-<<<<<<< HEAD
 
 
 
     viewer = pannellum.viewer('panorama', {   
-=======
-    pannellum.viewer('panorama', {   
->>>>>>> b78f61069c4c648e6435d4e5d5c2cc4c23780952
         "default": {
             "firstScene": "cancello",
             "autoLoad": true,   
@@ -175,7 +196,6 @@
         }
     });
 
-<<<<<<< HEAD
        
     viewer.on('mousedown', function(event) {
         // For pitch and yaw of center of viewer
@@ -186,8 +206,9 @@
         console.log('-----');
     });
 
-=======
->>>>>>> b78f61069c4c648e6435d4e5d5c2cc4c23780952
+
+    
+
 
     // Hot spot creation function
     function hotspot(hotSpotDiv, args) {
@@ -195,15 +216,24 @@
         var span = document.createElement('span');
         span.innerHTML = args;
         hotSpotDiv.appendChild(span);
+
         span.style.width = span.scrollWidth - 20 + 'px';
         span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
-<<<<<<< HEAD
 
+     // Hot spot creation function
+     function hotspotImageRenderer(hotSpotDiv, imgSource) {
+        
+        hotSpotDiv.classList.add('tooltip');
+        var image = document.createElement('img');
+        image.src = imgSource;
+        hotSpotDiv.appendChild(image);
+        
+        image.style.width = 100 + 'px';
+        image.style.marginLeft = -(image.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
+        image.style.marginTop = -image.scrollHeight - 12 + 'px';
+        
+    }
 
-
-
-=======
->>>>>>> b78f61069c4c648e6435d4e5d5c2cc4c23780952
 }())
