@@ -143,12 +143,9 @@
         }
     ]
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
     viewer = pannellum.viewer('panorama', {   
         "default": {
             "firstScene": "cancello",
@@ -198,12 +195,8 @@
            }
         }
     });
-<<<<<<< HEAD
 
        
-=======
-  
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
     viewer.on('mousedown', function(event) {
         // For pitch and yaw of center of viewer
         console.log("Pitch: ", viewer.getPitch());
@@ -213,13 +206,8 @@
         console.log('-----');
     });
 
-<<<<<<< HEAD
-
-    
 
 
-=======
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
     // Hot spot creation function
     function hotspot(hotSpotDiv, args) {
         hotSpotDiv.classList.add('tooltip');
@@ -231,7 +219,6 @@
         span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
-<<<<<<< HEAD
 
      // Hot spot creation function
      function hotspotImageRenderer(hotSpotDiv, imgSource) {
@@ -248,7 +235,3 @@
     }
 
 }())
-=======
-
-}())
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
