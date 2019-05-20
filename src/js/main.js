@@ -32,7 +32,6 @@
         }
             
     ];
-
     var desertHS = [
         {
             "pitch": -0.6,
@@ -53,8 +52,6 @@
             "createTooltipArgs": "Walter White & Jesse Pinkman"
         },
     ]
-
-
     var cancelloHS = [
         {
             "pitch": -0.6,
@@ -142,13 +139,7 @@
             "targetPitch": 2
         }
     ]
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
+/*
     viewer = pannellum.viewer('panorama', {   
         "default": {
             "firstScene": "cancello",
@@ -198,12 +189,8 @@
            }
         }
     });
-<<<<<<< HEAD
-
-       
-=======
-  
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
+*/
+       /*
     viewer.on('mousedown', function(event) {
         // For pitch and yaw of center of viewer
         console.log("Pitch: ", viewer.getPitch());
@@ -212,14 +199,18 @@
         //console.log(viewer.mouseEventToCoords(event));
         console.log('-----');
     });
+    */
 
-<<<<<<< HEAD
-
+        
+    videojs('videopanorama', {
+        plugins: {
+            pannellum: {
+                "hfov": 10,
+                "pitch": 100,
+            }
+        }
+    });
     
-
-
-=======
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
     // Hot spot creation function
     function hotspot(hotSpotDiv, args) {
         hotSpotDiv.classList.add('tooltip');
@@ -231,7 +222,6 @@
         span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
         span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
-<<<<<<< HEAD
 
      // Hot spot creation function
      function hotspotImageRenderer(hotSpotDiv, imgSource) {
@@ -248,7 +238,4 @@
     }
 
 }())
-=======
-
-}())
->>>>>>> 37870907797d7405dceb73e72b40c78e0538ed28
+    

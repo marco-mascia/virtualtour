@@ -8,16 +8,41 @@
       <link rel="apple-touch-icon" href="icon.png"> 
       <link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css"/>
       <!-- >script type="text/javascript" src="https://cdn.pannellum.org/2.4/pannellum.js"></script-->
-      <script type="text/javascript" src="libpannellum.js"></script> 
-      <script type="text/javascript" src="pannellum.js"></script>
-      <link rel="stylesheet" href="style.css" class="src">
+      <script type="text/javascript" src="js/libpannellum.js"></script> 
+      <script type="text/javascript" src="js/pannellum.js"></script>
+      <link rel="stylesheet" href="css/style.css" class="src">
+
+
+      <link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet"type="text/css">
+      <script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
+      <script src="js/videojs-pannellum-plugin.js"></script>
   </head>
   <body>
     <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
-    <div id="panorama" class="panorama"></div>
+    <!-- div id="panorama" class="panorama"></div-->
+
+    <video id="videopanorama" class="video-js vjs-default-skin vjs-big-play-centered"
+    controls preload="none" style="width:100%;height:400px;"
+    poster="./img/Tiger.jpg" crossorigin="anonymous">
+    
+      <source src="./video/R0010338.webm" type="video/webm"/>
+      <source src="./video/R0010338.MP4" type="video/mp4"/>
+  
+
+      <!--
+      <source src="./video/jfk.webm" type="video/webm"/>
+      <source src="./video/jfk.MP4" type="video/mp4"/>
+      -->
+      <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to
+          a web browser that <a href="http://videojs.com/html5-video-support/"
+          target="_blank">supports HTML5 video</a>
+      </p>
+  </video>
+
   </body>
 
-  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </html> 
