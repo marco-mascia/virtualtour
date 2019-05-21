@@ -54,13 +54,20 @@
     ]
     var cancelloHS = [
         {
+            "pitch": 14.1,
+            "yaw": 1.5,
+            "type": "info",
+            "text": "Another Viewer",
+            "URL": "another.html"
+        },
+        {
             "pitch": -0.6,
             "yaw": 100,
             "type": "scene",
             "text": "Verso il logo ",
             "sceneId": "logo",
             "targetYaw": 100,
-            "targetPitch": 2
+            "targetPitch": 2    
         },
         {
             "pitch": 1,
@@ -139,7 +146,7 @@
             "targetPitch": 2
         }
     ]
-/*
+
     viewer = pannellum.viewer('panorama', {   
         "default": {
             "firstScene": "cancello",
@@ -189,14 +196,14 @@
            }
         }
     });
-       /*
+       
     viewer.on('mousedown', function(event) {
         //console.log(viewer.mouseEventToCoords(event));
         console.log('-----');
     });
-    */
+    
 
-        
+    /*
     videojs('videopanorama', {
         plugins: {
             pannellum: {
@@ -205,6 +212,11 @@
             }
         }
     });
+    */
+
+    function goToViewer(){
+
+    }
     
     // Hot spot creation function
     function hotspot(hotSpotDiv, args) {
