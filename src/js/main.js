@@ -189,13 +189,8 @@
            }
         }
     });
-*/
        /*
     viewer.on('mousedown', function(event) {
-        // For pitch and yaw of center of viewer
-        console.log("Pitch: ", viewer.getPitch());
-        console.log("Yaw: ", viewer.getYaw());
-        // For pitch and yaw of mouse location
         //console.log(viewer.mouseEventToCoords(event));
         console.log('-----');
     });
